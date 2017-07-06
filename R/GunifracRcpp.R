@@ -71,7 +71,7 @@ GUniFrac_cum <- function (otu.tab, tree) {
 
 GUniFrac=function(phylo,pow=1,numThreads=3){
   if(is.null(phylo@phy_tree)) {stop("There is no phy_tree")}
-  otu=otu_table(phylo_genus)@.Data
+  otu=otu_table(phylo)@.Data
   if(taxa_are_rows(phylo)){
     otu=t(otu)
   }
