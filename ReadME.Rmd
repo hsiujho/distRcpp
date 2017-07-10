@@ -16,5 +16,5 @@ knitr::opts_chunk$set(echo = TRUE)
 安裝本套件
 ```{r,eval=FALSE}
 require(devtools)
-install_github("mhahsler/rBLAST")
+install_github("mhahsler/distRcpp")
 ```
