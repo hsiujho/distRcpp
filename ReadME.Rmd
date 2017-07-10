@@ -1,0 +1,20 @@
+---
+title: "distRcpp"
+author: "Hsiu J. Ho"
+date: "2017年7月10日"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+這個套件搜集計算distance matrix的Rcpp, 並進一步套用在RcppParallel以平行計算加強效率. 目前可計算distance如下:
+1. Jensen-Shannon distance, 原始碼來源為[Parallel Distance Matrix Calculation with RcppParallel](http://gallery.rcpp.org/articles/parallel-distance-matrix/).
+2. Genearalized unifrac distance, 參考套件[MiSPU::GUniFrac](https://github.com/cran/MiSPU)的做法.
+
+安裝本套件
+```{r,eval=FALSE}
+require(devtools)
+install_github("mhahsler/rBLAST")
+```
