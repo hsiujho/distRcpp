@@ -2,14 +2,14 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 GunifracRcpp <- function(mat, brlen, powv) {
-    .Call('distRcpp_GunifracRcpp', PACKAGE = 'distRcpp', mat, brlen, powv)
+    .Call('_distRcpp_GunifracRcpp', PACKAGE = 'distRcpp', mat, brlen, powv)
 }
 
 rcpp_parallel_js_distance <- function(mat) {
-    .Call('distRcpp_rcpp_parallel_js_distance', PACKAGE = 'distRcpp', mat)
+    .Call('_distRcpp_rcpp_parallel_js_distance', PACKAGE = 'distRcpp', mat)
 }
 
 rcpp_hello <- function() {
-    .Call('distRcpp_rcpp_hello', PACKAGE = 'distRcpp')
+    .Call('_distRcpp_rcpp_hello', PACKAGE = 'distRcpp')
 }
 

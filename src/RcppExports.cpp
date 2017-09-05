@@ -7,7 +7,7 @@ using namespace Rcpp;
 
 // GunifracRcpp
 NumericMatrix GunifracRcpp(NumericMatrix mat, NumericVector brlen, double powv);
-RcppExport SEXP distRcpp_GunifracRcpp(SEXP matSEXP, SEXP brlenSEXP, SEXP powvSEXP) {
+RcppExport SEXP _distRcpp_GunifracRcpp(SEXP matSEXP, SEXP brlenSEXP, SEXP powvSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -20,7 +20,7 @@ END_RCPP
 }
 // rcpp_parallel_js_distance
 NumericMatrix rcpp_parallel_js_distance(NumericMatrix mat);
-RcppExport SEXP distRcpp_rcpp_parallel_js_distance(SEXP matSEXP) {
+RcppExport SEXP _distRcpp_rcpp_parallel_js_distance(SEXP matSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -31,7 +31,7 @@ END_RCPP
 }
 // rcpp_hello
 List rcpp_hello();
-RcppExport SEXP distRcpp_rcpp_hello() {
+RcppExport SEXP _distRcpp_rcpp_hello() {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -41,9 +41,9 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"distRcpp_GunifracRcpp", (DL_FUNC) &distRcpp_GunifracRcpp, 3},
-    {"distRcpp_rcpp_parallel_js_distance", (DL_FUNC) &distRcpp_rcpp_parallel_js_distance, 1},
-    {"distRcpp_rcpp_hello", (DL_FUNC) &distRcpp_rcpp_hello, 0},
+    {"_distRcpp_GunifracRcpp", (DL_FUNC) &_distRcpp_GunifracRcpp, 3},
+    {"_distRcpp_rcpp_parallel_js_distance", (DL_FUNC) &_distRcpp_rcpp_parallel_js_distance, 1},
+    {"_distRcpp_rcpp_hello", (DL_FUNC) &_distRcpp_rcpp_hello, 0},
     {NULL, NULL, 0}
 };
 
