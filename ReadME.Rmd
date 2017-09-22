@@ -30,10 +30,11 @@ Error: package or namespace load failed for ‘distRcpp’ in dyn.load(file, DLL
 ERROR: loading failed
 ```
 
-使用時以`source`指令滙入要用的函數, 如下, 應可執行.
+使用時, 下載原始檔, 以`source`指令滙入要用的函數, 如下, 應可執行.
 ```{r,eval=FALSE}
-Rcpp::sourceCpp('./distRcpp/src/jensen_shannon_distance.cpp')
-source('./distRcpp/R/JSD.R')
+path="./distRcpp"
+Rcpp::sourceCpp(file.path(path,'src/jensen_shannon_distance.cpp'))
+source(file.path(path,'R/JSD.R'))
 ```
 
 
