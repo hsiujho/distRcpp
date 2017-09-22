@@ -18,3 +18,25 @@ knitr::opts_chunk$set(echo = TRUE)
 require(devtools)
 install_github("hsiujho/distRcpp")
 ```
+
+**注意**
+在CentOS 7 環境下, 安裝會出現錯誤訊息.
+```yaml
+Error: package or namespace load failed for ‘distRcpp’ in dyn.load(file, DLLpath = DLLpath, ...):
+ 無法載入共享物件 '/home/peter/R/x86_64-redhat-linux-gnu-library/3.4/distRcpp/libs/distRcpp.so' ：
+ /home/peter/R/x86_64-redhat-linux-gnu-library/3.4/distRcpp/libs/distRcpp.so: undefined symbol: _ZTIN3tbb4taskE
+錯誤: loading failed
+停止執行
+ERROR: loading failed
+```
+
+使用時以`source`指令滙入要用的函數, 如下, 應可執行.
+```{r,eval=FALSE}
+Rcpp::sourceCpp('./distRcpp/src/jensen_shannon_distance.cpp')
+source('./distRcpp/R/JSD.R')
+```
+
+
+
+
+
